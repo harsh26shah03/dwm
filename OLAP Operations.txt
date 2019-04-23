@@ -1,0 +1,18 @@
+Slicing :
+mysql> select Sl.sid, itid, cid ,sum(price) from sales Sl, store s where Sl.sid=s.sid and scity='mumbai' group by Sl.sid, itid, cid;
+
+Dicing :
+mysql> select Sl.sid, Sl.itid, cid ,sum(price) from sales Sl, store s, item i where Sl.sid=s.sid and Sl.itid=i.itid and scity='mumbai' and color='red' group by Sl.sid, Sl.itid, cid;
+
+Roll up:
+mysql> select scountry , category ,sum(price)
+->from sales Sl, store s, item i
+->whereSl.sid=s.sid and Sl.itid=i.itid
+->group by scountry ,category;
+
+Drill-down:
+mysql> select scountry , scity, gender, category ,sum(price)
+->from sales Sl, store s, item i, customer c
+->whereSl.sid=s.sid and Sl.itid=i.itid and Sl.cid=c.cid
+->group by scountry ,scity ,gender,category;
+ 

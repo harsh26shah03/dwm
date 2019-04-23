@@ -1,0 +1,23 @@
+//Store Dimension
+create table dim_store(id varchar(25),store_no varchar(25),state_province varchar(25),country varchar(25));
+insert into dim_store values('D10',1001,'Mumbai','INDIA'); 
+insert into dim_store values('D20',1002,'Gujrat','INDIA'); 
+insert into dim_store values('D30',1003,'GOA','INDIA');
+
+//Product Dimension
+create table dim_product(id varchar(25),Ean_code varchar(25),product_name varchar(25),Brand varchar(25), product_category varchar(25));
+insert into dim_product values('P10','E100','c7','Nokia','Mobile');
+insert into dim_product values('P20','E200','Lumia510','Nokia','Mobile'); 
+insert into dim_product values('P30','E300','LENOVO','IBM','Computer');
+
+//Date Dimension
+CREATE TABLE Dim_Date(Id varchar(25), Dates varchar(25), Days varchar(25), Months varchar(25), Quaters varchar(25), Years varchar(25));
+Insert into Dim_Date values('D10',26,'Wed',9,'3mn',2007);
+Insert into Dim_Date values('D20',21,'Mon',4,'3mn',2008);
+Insert into Dim_Date values('D30',20,'Sat',9,'4mn',2008);
+
+//Fact sales
+create table fact_sales(id varchar(25),store_id varchar(25),product_id varchar(25),unit_id varchar(25));
+insert into fact_sales values('D10','S10','P10',100);
+insert into fact_sales values('D20','S20','P20',150);
+insert into fact sales values(‘D30’,’S30’,’P30’,300);
