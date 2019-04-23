@@ -1,0 +1,20 @@
+@relation beach
+@attribute condition {sunny,cloudy,raining}
+@attribute temo numeric
+@attribute class{yes,no}
+@data
+sunny	85	yes
+sunny	75	yes
+cloudy	95	yes
+cloudy	60	no
+raining	80	no
+sunny	105	no
+sunny	70	yes
+cloudy	90	yes
+cloudy	50	no
+raining	78	no
+sunny	83	yes
+sunny	79	yes
+cloudy	99	yes
+cloudy	55	no
+raining	76	no
